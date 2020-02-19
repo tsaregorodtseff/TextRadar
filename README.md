@@ -1,7 +1,7 @@
 # TextRadar
 TextRadar - fuzzy search technology, underlying approaches demonstration, C# .NET MVC.
 
-textradar.ru (full version test bench)
+http://textradar.ru/ (full version test bench)
 
 Embedded fuzzy search technology for various systems, such as websites, accounting systems, databases, etc.
 
