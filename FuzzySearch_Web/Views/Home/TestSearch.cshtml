@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>TestSearch</title>
+</head>
+<body>
+    <div>
+
+        <h3>Результат поиска</h3>
+
+        <b>Строка данных:</b> @MvcHtmlString.Create(ViewData.Model.DataString)
+        <br><br>
+
+        <b>Строка поиска:</b> @MvcHtmlString.Create(ViewData.Model.SearchString)
+        <br><br>
+
+        <b>Коэффициент:</b> @Math.Round(ViewData.Model.Relevance, 3)
+        <br><br>
+
+        <b>Найдено:</b>
+        <br>
+        @MvcHtmlString.Create(ViewData.Model.FullDisplayOfFoundFragments)
+
+
+    </div>
+</body>
+</html>

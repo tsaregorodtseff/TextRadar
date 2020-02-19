@@ -1,0 +1,33 @@
+﻿
+@*@{
+    Layout = null;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Pagination</title>
+</head>
+<body>
+
+    <div>
+
+        <br>
+
+        <h3>Л.Н. Толстой, Война и мир</h3>
+        <h4>Страницы</h4>
+
+        @for (int i = 0; i < ViewData.Model; i++)
+        {
+            if ((i % 10) == 0)
+            {
+                <br>
+            }
+            @Html.ActionLink(" " + (i + 1) + " ", "Page", new { PageIndex = (i + 1) }, new { target = "_blank" })
+        }
+        <br>
+    </div>
+</body>
+</html>

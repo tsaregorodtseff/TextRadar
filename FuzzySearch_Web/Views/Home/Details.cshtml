@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Детали</title>
+</head>
+<body>
+    <div>
+
+        <h3>Результат поиска "@(ViewData.Model.SearchString)" на стр. @(ViewData.Model.Index + 1)</h3>
+
+        <b>Коэффициент:</b> @Math.Round(ViewData.Model.Relevance, 3)
+        <br><br>
+
+        <b>Найдено:</b>
+        <br>
+        @MvcHtmlString.Create(ViewData.Model.FullDisplayOfFoundFragments)
+
+
+    </div>
+</body>
+</html>

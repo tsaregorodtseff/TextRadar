@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title Нечеткий поиск TextRadar</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @Scripts.Render("~/scripts/jquery-1.10.2.js")
+    @Scripts.Render("~/scripts/jquery.unobtrusive-ajax.js")
+
+    <style>
+        .select {
+            /*color: maroon;*/ /* Цвет текста */
+            background-color: #e2b48d;/*#FFD700;*/
+            font-weight: 600;
+        }
+    </style>
+
+    <style>
+        .findefragments {
+            /*color: maroon;*/ /* Цвет текста */
+            background-color: #ffeb99; /*//#FFD700;*/
+            /*font-weight: 600;*/
+        }
+    </style>
+
+    <style>
+        .select1 {
+            /*color: maroon;*/ /* Цвет текста */
+            background-color: #ffda46; /*//#FFD700;*/
+            /*font-weight: 600;*/
+        }
+    </style>
+
+    <style>
+        .select2 {
+            /*color: maroon;*/ /* Цвет текста */
+            background-color: #fff3c6; /* #99FF99;*/
+            /*font-weight: 600;*/
+        }
+    </style>
+
+    <style>
+        .pagenumber {
+            color: #996633; /* Цвет текста */
+            /*background-color: #99FF99;
+            font-weight: 600;*/
+        }
+    </style>
+
+    <style>
+        .coefficient {
+            color: #8D8D53; /* Цвет текста */
+            /*background-color: #99FF99;
+            font-weight: 600;*/
+        }
+    </style>
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    @*<div class="navbar navbar-default navbar-fixed-top">*@
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("textradar", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*<li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>*@
+                    <li>@Html.ActionLink("О проекте", "About", "Home")</li>
+                    <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; Царегородцев С. В., 2018</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

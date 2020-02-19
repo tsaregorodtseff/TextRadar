@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Демонстрация алгоритма нечеткого поиска TextRadar";
+}
+
+    <div>
+
+        <style>
+            .SearchString {
+                width: 750px; /* Ширина поля в пикселах */
+            }
+        </style>
+
+        <style>
+            .b1 {
+                background: yellow; /* цвет фона */
+            }
+        </style>
+
+
+        <h3>Демонстрация алгоритма нечеткого поиска TextRadar (базовая функциональность)</h3>
+
+        <p>
+        @using (Ajax.BeginForm("MultiSearch", new AjaxOptions
+        {
+            UpdateTargetId = "results",
+            OnBegin = "OnBegin",
+            LoadingElementId = "loading"
+        }))
+        {
+            <br>
+            @*<br>*@
+
+            <input id="SearchString" name="SearchString" type="text" size="280" placeholder="Введите строку поиска" />
+            <input type="submit" class="select" , value="Найти" />
+            <br>
+            @*<br>*@
+
+        <p style=”line-height:1.5”>
+
+            <h4>
+                @MvcHtmlString.Create("искать в")
+            </h4>
+
+            <input id="SearchLocation" type="radio" name="SearchLocation" value="InBookText" checked="checked" />
+            @MvcHtmlString.Create("тексте романа Л.Н. Толстого Война и мир (")
+            @Html.ActionLink("текст разбит на 1490 страниц по 2000 символов в каждой", "Pagination", "", new { target = "_blank" })
+            @MvcHtmlString.Create(")")
+            <br>
+            <input id="SearchLocation" type="radio" name="SearchLocation" value="InDataString" />
+            @MvcHtmlString.Create("строке данных")
+
+            <br>
+        </p>
+        <textarea id="DataString" name="DataString" placeholder="Введите строку данных" cols="1000" , rows="3"></textarea>
+        <br>
+        <br>
+
+        }
+        </p>
+
+        <img id="loading" src="@Url.Content("~/Content/Images/loader.gif")" style="display:none" />
+
+        <div id="results"></div>
+
+    </div>
+
+@Scripts.Render("~/scripts/jquery-1.10.2.min.js")
+@Scripts.Render("~/scripts/jquery.unobtrusive-ajax.min.js")
+
+<script type="text/javascript">
+    function OnBegin()
+    {
+        $("#results").html("");
+    }
+</script>
