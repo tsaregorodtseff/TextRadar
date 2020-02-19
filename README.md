@@ -1,5 +1,5 @@
 # TextRadar
-TextRadar - fuzzy search technology (underlying approaches demonstration)
+TextRadar - fuzzy search technology, underlying approaches demonstration, C# .NET MVC.
 
 textradar.ru (full version test bench)
 
