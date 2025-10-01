@@ -7,4 +7,3 @@ A fuzzy search in the text is an urgent task if it is necessary to find informat
 The principle of operation of the TextRadar algorithm is based on the correlation analysis in its interpretation as applied to text data. The algorithm is original and is not a compilation of any of the well-known methods of fuzzy string comparisons.
 
 Read more about the algorithm here: https://habr.com/ru/post/474706/
-Full version test bench here: http://textradar.ru/
